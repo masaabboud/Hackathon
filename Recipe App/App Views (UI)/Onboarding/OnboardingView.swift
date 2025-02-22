@@ -44,10 +44,10 @@ struct WelcomeView: View {
         VStack{
             TabView{
                 //iterate over screens
-                ForEach(0..<3){
+                //ForEach(0..<3){
                     //something
                 }
             }
         }
     }
-}
+//}
