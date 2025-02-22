@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
-import FirebaseCoreInternal
+
+import Firebase
+
 
 @main
 struct Recipe_AppApp: App {

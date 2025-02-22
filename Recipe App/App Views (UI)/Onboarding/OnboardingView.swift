@@ -27,4 +27,31 @@ struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingView()
     }
+    
 }
+
+struct PageInfo: Identifiable {
+    let id = UUID()
+    let label: String
+    let text: String
+}
+
+let pages = [
+    PageInfo(label: "Welcome to app", text: "xyz"),
+    PageInfo(label: "we need data", text: "data"),
+    PageInfo(label: "hello", text: "hi")
+]
+
+struct WelcomeView: View {
+    var body: some View{
+        VStack{
+            TabView{
+                //iterate over screens
+                //ForEach(0..<3){
+                    //something
+                }
+            }
+        }
+    }
+//}
+
