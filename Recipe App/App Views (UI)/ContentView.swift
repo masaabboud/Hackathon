@@ -6,10 +6,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    //persist data, so once user presses "ok" ownt see again
     var body: some View {
         VStack {
-            Text("Hello")
+            Text("H")
         }
         .padding()
     }

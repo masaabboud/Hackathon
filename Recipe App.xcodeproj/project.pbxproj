@@ -19,6 +19,9 @@
 		029499612D6A327A00A321D9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499602D6A327A00A321D9 /* WelcomeView.swift */; };
 		029499632D6A33EE00A321D9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499622D6A33EE00A321D9 /* OnboardingView.swift */; };
 		029499652D6A3C0A00A321D9 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499642D6A3C0A00A321D9 /* GoalsView.swift */; };
+		029499672D6A485000A321D9 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499662D6A485000A321D9 /* SignUpView.swift */; };
+		0294996A2D6A4C5A00A321D9 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499692D6A4C5A00A321D9 /* UserProfile.swift */; };
+		0294996E2D6A527B00A321D9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294996D2D6A527B00A321D9 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		029499602D6A327A00A321D9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		029499622D6A33EE00A321D9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		029499642D6A3C0A00A321D9 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		029499662D6A485000A321D9 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		029499692D6A4C5A00A321D9 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		0294996D2D6A527B00A321D9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 		0294995A2D6A310C00A321D9 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				029499682D6A4C4900A321D9 /* User Profile */,
 				0294992A2D6A2D1400A321D9 /* Recipe_AppApp.swift */,
 				029499332D6A2D1500A321D9 /* Persistence.swift */,
 				0294992E2D6A2D1500A321D9 /* Assets.xcassets */,
@@ -152,6 +159,7 @@
 		0294995B2D6A311D00A321D9 /* App Views (UI) */ = {
 			isa = PBXGroup;
 			children = (
+				0294996B2D6A4C6A00A321D9 /* UserProfile */,
 				0294992C2D6A2D1400A321D9 /* ContentView.swift */,
 				0294995F2D6A31CB00A321D9 /* Home */,
 				0294995E2D6A31C400A321D9 /* Onboarding */,
@@ -164,6 +172,7 @@
 			children = (
 				029499622D6A33EE00A321D9 /* OnboardingView.swift */,
 				029499602D6A327A00A321D9 /* WelcomeView.swift */,
+				029499662D6A485000A321D9 /* SignUpView.swift */,
 				029499642D6A3C0A00A321D9 /* GoalsView.swift */,
 			);
 			path = Onboarding;
@@ -172,8 +181,24 @@
 		0294995F2D6A31CB00A321D9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0294996D2D6A527B00A321D9 /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		029499682D6A4C4900A321D9 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				029499692D6A4C5A00A321D9 /* UserProfile.swift */,
+			);
+			path = "User Profile";
+			sourceTree = "<group>";
+		};
+		0294996B2D6A4C6A00A321D9 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +289,9 @@
 				Base,
 			);
 			mainGroup = 0294991E2D6A2D1400A321D9;
+			packageReferences = (
+				0294996C2D6A4D8600A321D9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 029499282D6A2D1400A321D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -309,10 +337,13 @@
 				029499342D6A2D1500A321D9 /* Persistence.swift in Sources */,
 				029499612D6A327A00A321D9 /* WelcomeView.swift in Sources */,
 				0294992D2D6A2D1400A321D9 /* ContentView.swift in Sources */,
+				0294996E2D6A527B00A321D9 /* HomeView.swift in Sources */,
 				029499632D6A33EE00A321D9 /* OnboardingView.swift in Sources */,
+				029499672D6A485000A321D9 /* SignUpView.swift in Sources */,
 				029499652D6A3C0A00A321D9 /* GoalsView.swift in Sources */,
 				0294992B2D6A2D1400A321D9 /* Recipe_AppApp.swift in Sources */,
 				029499372D6A2D1500A321D9 /* Recipe_App.xcdatamodeld in Sources */,
+				0294996A2D6A4C5A00A321D9 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +662,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0294996C2D6A4D8600A321D9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		029499352D6A2D1500A321D9 /* Recipe_App.xcdatamodeld */ = {

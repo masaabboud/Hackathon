@@ -9,11 +9,16 @@ import SwiftUI
 
 @main
 struct Recipe_AppApp: App {
-    let persistenceController = PersistenceController.shared
+    @AppStorage("isOnboardingShowing") private var isOnboardingShowing = true
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isOnboardingShowing {
+                OnboardingView()  // Show onboarding first
+            } else {
+                ContentView()
+            }
         }
     }
 }
+

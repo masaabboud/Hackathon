@@ -1,18 +1,23 @@
+//
+//  SignUpView.swift
+//  Recipe App
+//
+//  Created by Masa Abboud on 2/22/25.
+//
 
 import SwiftUI
 
-struct GoalsView: View {
+struct SignUpView: View {
     @Binding var currentPage: Int
-    @AppStorage("isOnboardingShowing") var isOnboardingShowing = true
-
-    var body: some View {
-        VStack {
-            Text("goals!")
-            
+    var body: some View{
+        VStack{
+            Text("sign up here!")
             Button(action: {
-                isOnboardingShowing = false
+                withAnimation {
+                    currentPage += 1
+                }
             }) {
-                Text("Done")
+                Text("create account")
                     .foregroundColor(.white)
                     .padding()
                     .frame(maxWidth: .infinity)
@@ -23,4 +28,6 @@ struct GoalsView: View {
         .padding()
     }
 }
+
+
 
