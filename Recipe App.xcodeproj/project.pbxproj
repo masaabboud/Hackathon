@@ -79,7 +79,6 @@
 		D16FC66D2D6A5D3700BD6EEA /* recipe_data.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = recipe_data.csv; sourceTree = "<group>"; };
 		D1D4FCE62D6A3EAF00EF8ED5 /* PythonPlaceholder.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PythonPlaceholder.py; sourceTree = "<group>"; };
 		D1D4FCE82D6A3EDE00EF8ED5 /* RunPythonCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPythonCode.swift; sourceTree = "<group>"; };
-]
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +110,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
+
 
 /* Begin PBXGroup section */
 		0294991E2D6A2D1400A321D9 = {
