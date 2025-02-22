@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    //persist data, so once user presses "ok" ownt see again
-    @AppStorage("isOnboardingShowing") var isOnboardingShowing = true
+    @State private var currentPage = 0;
+    
+    
     var body: some View {
         VStack {
-            Text("Welcome")
+            TabView(selection: $currentPage) {
+                WelcomeView(currentPage: $currentPage).tag(0)
+                SignUpView(currentPage: $currentPage).tag(1)
+                GoalsView(currentPage: $currentPage).tag(2)
+            }
         }
-        .sheet(isPresented: $isOnboardingShowing, content: {
-            WelcomeView()
-        })
     }
 }
+
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
@@ -51,3 +54,4 @@ struct WelcomeView: View {
         }
     }
 //}
+
