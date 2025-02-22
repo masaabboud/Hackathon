@@ -16,6 +16,13 @@
 		029499422D6A2D1600A321D9 /* Recipe_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499412D6A2D1600A321D9 /* Recipe_AppTests.swift */; };
 		0294994C2D6A2D1600A321D9 /* Recipe_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294994B2D6A2D1600A321D9 /* Recipe_AppUITests.swift */; };
 		0294994E2D6A2D1600A321D9 /* Recipe_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0294994D2D6A2D1600A321D9 /* Recipe_AppUITestsLaunchTests.swift */; };
+		029499612D6A327A00A321D9 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499602D6A327A00A321D9 /* WelcomeView.swift */; };
+		029499632D6A33EE00A321D9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499622D6A33EE00A321D9 /* OnboardingView.swift */; };
+		029499652D6A3C0A00A321D9 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499642D6A3C0A00A321D9 /* GoalsView.swift */; };
+		D16FC66A2D6A4E0800BD6EEA /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16FC6692D6A4E0400BD6EEA /* RecipeView.swift */; };
+		D1D4FCE72D6A3EBC00EF8ED5 /* PythonPlaceholder.py in Resources */ = {isa = PBXBuildFile; fileRef = D1D4FCE62D6A3EAF00EF8ED5 /* PythonPlaceholder.py */; };
+		D1D4FCE92D6A3EE800EF8ED5 /* RunPythonCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D4FCE82D6A3EDE00EF8ED5 /* RunPythonCode.swift */; };
+		D1D4FCEC2D6A3FFE00EF8ED5 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = D1D4FCEB2D6A3FFE00EF8ED5 /* PythonKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,12 @@
 		029499472D6A2D1600A321D9 /* Recipe AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recipe AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0294994B2D6A2D1600A321D9 /* Recipe_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_AppUITests.swift; sourceTree = "<group>"; };
 		0294994D2D6A2D1600A321D9 /* Recipe_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		029499602D6A327A00A321D9 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		029499622D6A33EE00A321D9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		029499642D6A3C0A00A321D9 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
+		D16FC6692D6A4E0400BD6EEA /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		D1D4FCE62D6A3EAF00EF8ED5 /* PythonPlaceholder.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PythonPlaceholder.py; sourceTree = "<group>"; };
+		D1D4FCE82D6A3EDE00EF8ED5 /* RunPythonCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPythonCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D4FCEC2D6A3FFE00EF8ED5 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +113,8 @@
 		029499292D6A2D1400A321D9 /* Recipe App */ = {
 			isa = PBXGroup;
 			children = (
-				0294992A2D6A2D1400A321D9 /* Recipe_AppApp.swift */,
-				0294992C2D6A2D1400A321D9 /* ContentView.swift */,
-				0294992E2D6A2D1500A321D9 /* Assets.xcassets */,
-				029499332D6A2D1500A321D9 /* Persistence.swift */,
+				0294995A2D6A310C00A321D9 /* App */,
+				0294995B2D6A311D00A321D9 /* App Views (UI) */,
 				029499382D6A2D1500A321D9 /* Info.plist */,
 				029499352D6A2D1500A321D9 /* Recipe_App.xcdatamodeld */,
 				029499302D6A2D1500A321D9 /* Preview Content */,
@@ -133,6 +145,54 @@
 				0294994D2D6A2D1600A321D9 /* Recipe_AppUITestsLaunchTests.swift */,
 			);
 			path = "Recipe AppUITests";
+			sourceTree = "<group>";
+		};
+		0294995A2D6A310C00A321D9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0294992A2D6A2D1400A321D9 /* Recipe_AppApp.swift */,
+				029499332D6A2D1500A321D9 /* Persistence.swift */,
+				0294992E2D6A2D1500A321D9 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0294995B2D6A311D00A321D9 /* App Views (UI) */ = {
+			isa = PBXGroup;
+			children = (
+				0294992C2D6A2D1400A321D9 /* ContentView.swift */,
+				0294995F2D6A31CB00A321D9 /* Home */,
+				0294995E2D6A31C400A321D9 /* Onboarding */,
+				D1D4FCE32D6A3E7000EF8ED5 /* Recipe */,
+			);
+			path = "App Views (UI)";
+			sourceTree = "<group>";
+		};
+		0294995E2D6A31C400A321D9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				029499622D6A33EE00A321D9 /* OnboardingView.swift */,
+				029499602D6A327A00A321D9 /* WelcomeView.swift */,
+				029499642D6A3C0A00A321D9 /* GoalsView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0294995F2D6A31CB00A321D9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D1D4FCE32D6A3E7000EF8ED5 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				D1D4FCE82D6A3EDE00EF8ED5 /* RunPythonCode.swift */,
+				D1D4FCE62D6A3EAF00EF8ED5 /* PythonPlaceholder.py */,
+				D16FC6692D6A4E0400BD6EEA /* RecipeView.swift */,
+			);
+			path = Recipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +283,9 @@
 				Base,
 			);
 			mainGroup = 0294991E2D6A2D1400A321D9;
+			packageReferences = (
+				D1D4FCEA2D6A3FC300EF8ED5 /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = 029499282D6A2D1400A321D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D4FCE72D6A3EBC00EF8ED5 /* PythonPlaceholder.py in Resources */,
 				029499322D6A2D1500A321D9 /* Preview Assets.xcassets in Resources */,
 				0294992F2D6A2D1500A321D9 /* Assets.xcassets in Resources */,
 			);
@@ -265,8 +329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D16FC66A2D6A4E0800BD6EEA /* RecipeView.swift in Sources */,
 				029499342D6A2D1500A321D9 /* Persistence.swift in Sources */,
+				029499612D6A327A00A321D9 /* WelcomeView.swift in Sources */,
+				D1D4FCE92D6A3EE800EF8ED5 /* RunPythonCode.swift in Sources */,
 				0294992D2D6A2D1400A321D9 /* ContentView.swift in Sources */,
+				029499632D6A33EE00A321D9 /* OnboardingView.swift in Sources */,
+				029499652D6A3C0A00A321D9 /* GoalsView.swift in Sources */,
 				0294992B2D6A2D1400A321D9 /* Recipe_AppApp.swift in Sources */,
 				029499372D6A2D1500A321D9 /* Recipe_App.xcdatamodeld in Sources */,
 			);
@@ -587,6 +656,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D1D4FCEA2D6A3FC300EF8ED5 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1D4FCEB2D6A3FFE00EF8ED5 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D1D4FCEA2D6A3FC300EF8ED5 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		029499352D6A2D1500A321D9 /* Recipe_App.xcdatamodeld */ = {
