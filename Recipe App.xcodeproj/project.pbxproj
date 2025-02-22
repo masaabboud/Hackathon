@@ -20,6 +20,14 @@
 		029499632D6A33EE00A321D9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499622D6A33EE00A321D9 /* OnboardingView.swift */; };
 		029499652D6A3C0A00A321D9 /* GoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029499642D6A3C0A00A321D9 /* GoalsView.swift */; };
 		D16FC66A2D6A4E0800BD6EEA /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16FC6692D6A4E0400BD6EEA /* RecipeView.swift */; };
+		D16FC66E2D6A5D3700BD6EEA /* recipe_data.csv in Resources */ = {isa = PBXBuildFile; fileRef = D16FC66D2D6A5D3700BD6EEA /* recipe_data.csv */; };
+		D16FC66F2D6A5D3700BD6EEA /* recipe.py in Resources */ = {isa = PBXBuildFile; fileRef = D16FC66C2D6A5D3700BD6EEA /* recipe.py */; };
+		D16FC6702D6A5D3700BD6EEA /* backend.py in Resources */ = {isa = PBXBuildFile; fileRef = D16FC66B2D6A5D3700BD6EEA /* backend.py */; };
+		D16FC6732D6A6B7E00BD6EEA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D16FC6722D6A6B7E00BD6EEA /* FirebaseAnalytics */; };
+		D16FC6752D6A6B7E00BD6EEA /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D16FC6742D6A6B7E00BD6EEA /* FirebaseAnalyticsOnDeviceConversion */; };
+		D16FC6772D6A6B7E00BD6EEA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D16FC6762D6A6B7E00BD6EEA /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		D16FC6792D6A6B7E00BD6EEA /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = D16FC6782D6A6B7E00BD6EEA /* FirebaseAppCheck */; };
+		D16FC67B2D6A6B7E00BD6EEA /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = D16FC67A2D6A6B7E00BD6EEA /* FirebaseAppDistribution-Beta */; };
 		D1D4FCE72D6A3EBC00EF8ED5 /* PythonPlaceholder.py in Resources */ = {isa = PBXBuildFile; fileRef = D1D4FCE62D6A3EAF00EF8ED5 /* PythonPlaceholder.py */; };
 		D1D4FCE92D6A3EE800EF8ED5 /* RunPythonCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D4FCE82D6A3EDE00EF8ED5 /* RunPythonCode.swift */; };
 		D1D4FCEC2D6A3FFE00EF8ED5 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = D1D4FCEB2D6A3FFE00EF8ED5 /* PythonKit */; };
@@ -60,6 +68,9 @@
 		029499622D6A33EE00A321D9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		029499642D6A3C0A00A321D9 /* GoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsView.swift; sourceTree = "<group>"; };
 		D16FC6692D6A4E0400BD6EEA /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		D16FC66B2D6A5D3700BD6EEA /* backend.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = backend.py; sourceTree = "<group>"; };
+		D16FC66C2D6A5D3700BD6EEA /* recipe.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = recipe.py; sourceTree = "<group>"; };
+		D16FC66D2D6A5D3700BD6EEA /* recipe_data.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = recipe_data.csv; sourceTree = "<group>"; };
 		D1D4FCE62D6A3EAF00EF8ED5 /* PythonPlaceholder.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PythonPlaceholder.py; sourceTree = "<group>"; };
 		D1D4FCE82D6A3EDE00EF8ED5 /* RunPythonCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPythonCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,7 +80,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D16FC6732D6A6B7E00BD6EEA /* FirebaseAnalytics in Frameworks */,
+				D16FC6752D6A6B7E00BD6EEA /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				D1D4FCEC2D6A3FFE00EF8ED5 /* PythonKit in Frameworks */,
+				D16FC6792D6A6B7E00BD6EEA /* FirebaseAppCheck in Frameworks */,
+				D16FC6772D6A6B7E00BD6EEA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				D16FC67B2D6A6B7E00BD6EEA /* FirebaseAppDistribution-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,9 +204,12 @@
 		D1D4FCE32D6A3E7000EF8ED5 /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
-				D1D4FCE82D6A3EDE00EF8ED5 /* RunPythonCode.swift */,
 				D1D4FCE62D6A3EAF00EF8ED5 /* PythonPlaceholder.py */,
+				D1D4FCE82D6A3EDE00EF8ED5 /* RunPythonCode.swift */,
 				D16FC6692D6A4E0400BD6EEA /* RecipeView.swift */,
+				D16FC66B2D6A5D3700BD6EEA /* backend.py */,
+				D16FC66C2D6A5D3700BD6EEA /* recipe.py */,
+				D16FC66D2D6A5D3700BD6EEA /* recipe_data.csv */,
 			);
 			path = Recipe;
 			sourceTree = "<group>";
@@ -285,6 +304,7 @@
 			mainGroup = 0294991E2D6A2D1400A321D9;
 			packageReferences = (
 				D1D4FCEA2D6A3FC300EF8ED5 /* XCRemoteSwiftPackageReference "PythonKit" */,
+				D16FC6712D6A6B4F00BD6EEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 029499282D6A2D1400A321D9 /* Products */;
 			projectDirPath = "";
@@ -305,6 +325,9 @@
 				D1D4FCE72D6A3EBC00EF8ED5 /* PythonPlaceholder.py in Resources */,
 				029499322D6A2D1500A321D9 /* Preview Assets.xcassets in Resources */,
 				0294992F2D6A2D1500A321D9 /* Assets.xcassets in Resources */,
+				D16FC66E2D6A5D3700BD6EEA /* recipe_data.csv in Resources */,
+				D16FC66F2D6A5D3700BD6EEA /* recipe.py in Resources */,
+				D16FC6702D6A5D3700BD6EEA /* backend.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Recipe App/Preview Content\"";
+				DEVELOPMENT_TEAM = 63A9JYUT7J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -524,6 +548,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Recipe App/Preview Content\"";
+				DEVELOPMENT_TEAM = 63A9JYUT7J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -658,6 +683,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D16FC6712D6A6B4F00BD6EEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
+			};
+		};
 		D1D4FCEA2D6A3FC300EF8ED5 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pvieito/PythonKit.git";
@@ -669,6 +702,31 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D16FC6722D6A6B7E00BD6EEA /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16FC6712D6A6B4F00BD6EEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D16FC6742D6A6B7E00BD6EEA /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16FC6712D6A6B4F00BD6EEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		D16FC6762D6A6B7E00BD6EEA /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16FC6712D6A6B4F00BD6EEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		D16FC6782D6A6B7E00BD6EEA /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16FC6712D6A6B4F00BD6EEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		D16FC67A2D6A6B7E00BD6EEA /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D16FC6712D6A6B4F00BD6EEA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
 		D1D4FCEB2D6A3FFE00EF8ED5 /* PythonKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D1D4FCEA2D6A3FC300EF8ED5 /* XCRemoteSwiftPackageReference "PythonKit" */;
