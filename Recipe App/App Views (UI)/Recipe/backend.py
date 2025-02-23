@@ -16,12 +16,31 @@ def get_recipes():
     return jsonify(recipe_data)
 
 def filter_recipes_by_preferences(preferences, recipes):
-    # Assume preferences contains things like "low calorie", "high protein", etc.
     filtered_recipes = []
+    
+    # Split preferences into a list (ingredients, cuisine, allergens, etc.)
+    preferences_list = [pref.strip().lower() for pref in preferences.split(",")]
+    
     for recipe in recipes:
-        if "low calorie" in preferences and recipe['Calories_Per_Serving'] < 300:
+        # Check for ingredient match
+        ingredients_in_recipe = [ingredient.lower() for ingredient in recipe['Ingredients_List'].split(",")]
+        
+        # Check for cuisine match (e.g., "Korean")
+        cuisine_match = any(pref in recipe['Cuisine_Type'].lower() for pref in preferences_list)
+
+        # Check for allergens match (e.g., "soy", "dairy") and exclude recipes with allergens
+        allergens_in_recipe = recipe.get('Allergen_Information', None)
+        
+        # Skip recipe if allergen info exists and contains any allergens in the preferences list
+        allergen_match = False
+        if allergens_in_recipe:
+            allergens_in_recipe = allergens_in_recipe.lower()  # Safe to call .lower() now
+            allergen_match = any(allergen in allergens_in_recipe for allergen in preferences_list if allergen in ['soy', 'dairy'])
+
+        # Filter by ingredients, cuisine, and allergens (exclude if allergens match)
+        if (any(ingredient in ingredients_in_recipe for ingredient in preferences_list) or cuisine_match) and not allergen_match:
             filtered_recipes.append(recipe)
-        # Add more filters based on user preferences
+
     return filtered_recipes
 
 @app.route("/generate_recipe", methods=["POST"])
